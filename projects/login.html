@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('/images/aboutUsLogo.png') no-repeat center center/cover;
+        }
+
+        .login-container {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .login-container button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-container a {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ff7e5f;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-container a:hover {
+            color: #feb47b;
+        }
+
+        .guest-login {
+            margin-top: 1rem;
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .guest-login:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <a href="#" onclick="forgotPassword()">Forgot Password?</a>
+        <button class="guest-login" onclick="signInAsGuest()">Sign in as Guest</button>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (email === '' || password === '') {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            alert(`Welcome, ${email}!`);
+        }
+
+        function forgotPassword() {
+            alert('Redirecting to forgot password page...');
+        }
+
+        function signInAsGuest() {
+            alert('Signed in as a Guest!');
+        }
+    </script>
+</body>
+</html>

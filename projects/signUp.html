@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/images/img1.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+            overflow: hidden;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #ffcc00;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border: 2px solid #ffcc00;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .error-message {
+            font-size: 0.9rem;
+            color: #ff6b6b;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e6b800;
+        }
+
+        .form-container img {
+            display: block;
+            margin: 0 auto 15px;
+            width: 100px;
+            animation: bounce 2s infinite;
+        }
+
+        .success-message {
+            color: #00ff00;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="/images/musicIcon.png" alt="Form Icon">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error-message" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error-message" id="confirmPasswordError"></span>
+            </div>
+
+            <button type="submit">Submit</button>
+            <p class="success-message" id="successMessage" style="display: none;">Successfully created! Redirecting...</p>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent form from submitting
+
+            let valid = true;
+
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value)) {
+                emailError.textContent = 'Invalid email format.';
+                valid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            // Password strength validation
+            const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (!passwordPattern.test(passwordInput.value)) {
+                passwordError.textContent = 'Password must be at least 8 characters long, contain an uppercase letter, a lowercase letter, a number, and a special character.';
+                valid = false;
+            } else {
+                passwordError.textContent = '';
+            }
+
+            // Confirm password validation
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                confirmPasswordError.textContent = 'Passwords do not match.';
+                valid = false;
+            } else {
+                confirmPasswordError.textContent = '';
+            }
+
+            if (valid) {
+                successMessage.style.display = 'block';
+
+                // Redirect to homepage after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'home.html'; // Replace '/home' with your actual homepage URL
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+
+body{
+
+    background-image: url("/images/bgpic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+ul{
+
+    list-style-type:none;
+    margin-top: 150px;
+    text-align: center;
+
+/*    width:auto;
+height:130px;
+
+border:2px solid;
+background-color:black;
+background-image: url("/images/m4.png");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size:cover;*/
+
+}
+
+li a{
+    border:2px solid;
+   
+    text-align: center;
+    margin-right:5px;
+    
+font-family:"Ink free";
+color:aqua;
+float:left;
+text-decoration:none;
+padding: 20px;
+margin-top:10px;
+background-color:black;
+border-radius:20px;
+box-shadow:15px -15px 5px rgb(102, 102, 53);
+
+
+}
+
+.container{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+
+h1{
+    width:fit-content;
+   
+    font-family:serif;
+    font-size:40px;
+    color:azure;
+    text-align: center;
+    background-color:black;
+    margin-top: 80px;
+
+    animation:doc;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+
+    box-shadow:15px -15px 5px  rgb(59, 190, 114);
+    border-radius:20px;
+    margin-left: 40%;
+}
+
+@keyframes doc{
+
+    30%{ transform:rotatex(360deg);}
+  
+   
+   
+  
+    80%{ transform:scale(1.2,1.2);}
+  
+
+}

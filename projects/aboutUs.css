@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* About Us Section */
+#about-us {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #e91e63, #2196f3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Image Section */
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Slider Section */
+.about-slider {
+    flex: 1;
+    max-width: 600px;
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.swiper-slide p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+}
+
+/* Call-to-Action Buttons */
+.about-buttons {
+    margin: 20px 0;
+}
+
+.about-buttons .btn-primary,
+.about-buttons .btn-secondary {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #e91e63;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.team-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

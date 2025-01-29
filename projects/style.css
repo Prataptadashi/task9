@@ -1,0 +1,245 @@
+
+
+body{
+    background-image: url("/images/ntr.png");/*/images/photoWebBG4.jpg */
+    background-repeat: no-repeat;
+    background-position:center;
+    background-attachment:fixed;
+    background-size: cover;
+
+}
+
+.gty li.a a {
+    color: #2645e0; /* Use any color code you prefer */
+    text-decoration: none; /* Optional: Remove underline */
+    font-size: 20px; /* Optional: Adjust font size */
+}
+
+/* Change text color on hover */
+.gty li.a a:hover {
+    color: #000000; /* Change color when hovered */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+ul{
+    list-style-type:none;
+    margin-top: 40px ;
+    padding: 0px;
+    padding-inline-start: 10pfjuvbsn
+    mfmrf kvfv,fvp;
+   
+}
+
+li.a{
+    text-decoration: none;
+    text-decoration-color: #bbbbbb;
+    float: left;
+    
+    padding: 5px;
+    color:rgb(243, 243, 243) ;
+    text-align: center;
+   font-size:20px;
+    margin: 4px;   /*
+    border-style: outset;
+    border-color:darkturquoise;
+   text-shadow: 2px -2px 2px whitesmoke ;*/
+  margin-right:10px ;
+
+}
+
+.gty{
+    text-decoration-color: #bbbbbb;
+    color:rgb(243, 243, 243) ;
+    color: #bbbbbb;
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    justify-content:flex-end;
+    /*background-color: rgb(9, 82, 239);*/
+}
+
+.companyName{
+    color:rgb(239, 11, 76);
+    margin-top: 2%;
+    margin-left: 1%;
+    font-size:50px;
+    font-family: "Ink free",sans-serif;
+    text-shadow: 2px -3px 2px rgb(12, 200, 225);
+}
+
+.message{
+    color:rgb(247, 247, 247);
+    
+    margin-top:150px;
+    margin-left:67% ;
+    font-size:21px;
+    font-family: "Mv Boli",sans-serif;
+}
+
+img{
+    width: 300px;
+    height: 150px;
+    margin-top: 0px;
+    margin-left: 10px;
+
+}
+
+li.a:hover{
+    background-color:rgb(255, 255, 255);
+   
+    animation: menuButton;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes menuButton{
+    50%{transform: scale(1.1,1.2);}
+}
+/*
+#albumButton{
+    margin-left:45% ;
+    font-size:21px;
+    font-family: "Mv Boli",sans-serif; } */
+
+button#albumButton{
+
+
+
+    margin-left:75% ;
+    font-size:21px;
+    font-family: "Mv Boli",sans-serif; 
+
+
+    color: rgb(239, 240, 241);
+    background-color:black;
+    animation: menuButton1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes menuButton1{
+   
+    50%{transform: rotate(3600deg);}
+   
+}
+#albumButton:hover{
+    color: rgb(240, 244, 236);
+    background-color:black;
+    animation: menuButton2;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes menuButton2{
+    50%{transform: scale(1.1,1.2);}
+}
+
+
+
+
+
+/* yt */
+
+.footer{ 
+    
+    line-height: 1.0;
+	font-family: 'Poppins', sans-serif;
+
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+
+}
+
+.container{
+	max-width: 1000px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 22%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+fa-home{
+    color: #e91e63;
+}
+
+
+
